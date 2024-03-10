@@ -1,0 +1,25 @@
+.floating-alert {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra (puedes personalizarlo) */
+}
+
+.floating-alert p {
+  margin: 0;
+}
+
+.floating-alert button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  outline: none;
+  margin-top: 5px;
+}
+
+.floating-alert button:hover {
+  text-decoration: underline;
+}

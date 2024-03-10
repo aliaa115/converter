@@ -1,0 +1,128 @@
+[data-bs-theme="dark"] {
+  .drop-container {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px dashed #444;
+    color: #444;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
+  }
+
+  .drop-container:hover {
+    background: #000;
+    border-color: #777;
+  }
+
+  .drop-container:hover .drop-title {
+    color: #222;
+  }
+
+  .drop-title {
+    color: #444;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    transition: color 0.2s ease-in-out;
+  }
+}
+
+[data-bs-theme=""] {
+  .drop-container {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px dashed #444;
+    color: #444;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
+  }
+
+  .drop-container:hover {
+    border-color: #777;
+  }
+
+  .drop-container:hover .drop-title {
+    color: #222;
+  }
+
+  .drop-title {
+    color: #444;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    transition: color 0.2s ease-in-out;
+  }
+}
+
+.div-click:hover {
+  cursor: pointer;
+}
+
+th,
+td {
+  width: 1%;
+}
+
+.btn-circle {
+  border-radius: 100px;
+  --bs-btn-line-height: 0.1;
+}
+
+.boton-hover span.text {
+  display: none;
+}
+
+.boton-hover:hover span.text {
+  display: inline;
+}
+
+[data-bs-theme="dark"] {
+  .ql-snow * {
+    color: white !important;
+  }
+}
+
+.ql-snow * {
+  color: black !important;
+}
+
+.pre_default {
+  margin: 0;
+  font-family: var(--bs-body-font-family);
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+}
+
+$tamanos: (
+  "": 0px,
+  "1": 10px,
+  "2": 20px,
+  "3": 30px,
+  "4": 40px,
+  "5": 50px,
+);
+
+@each $border-n, $border-s in $tamanos {
+  @if $border-n != "" {
+    .round-#{$border-n} {
+      border-radius: $border-s !important;
+    }
+  }
+}
+
+@import "./tooltip.scss";
+@import "./alert.scss";
